@@ -177,10 +177,8 @@
     <Content Include="Views\Product\_ProductList.cshtml" />
     <Content Include="Views\Login\Login.cshtml" />
     <Content Include="Views\Login\_UserLogin.cshtml" />
-    <Content Include="Views\Shared\_LoginLayout.cshtml" />
     <Content Include="Views\Cart\_CurrentCart.cshtml" />
     <Content Include="Views\Cart\CurrentCartList.cshtml" />
-    <Content Include="Views\Shared\_CartLayout.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

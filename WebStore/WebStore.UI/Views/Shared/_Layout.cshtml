@@ -20,14 +20,20 @@
 
                     </li>
                 </ul>
-                <ul class="nav navbar-nav navbar-right">
-                    <li>
-						@Html.Action("CurrentCart", "Cart")
-                    </li>
-                    <li>
-                        @Html.Action("UserLogin", "Login")
-                    </li>
-                </ul>
+                @if (ViewBag.Title == "Ваша корзина" || ViewBag.Title == "Список продуктов")
+				{
+					<ul class="nav navbar-nav navbar-right">
+						@if (ViewBag.Title == "Список продуктов")
+						{
+							<li>
+								@Html.Action("CurrentCart", "Cart")
+							</li>
+						}
+						<li>
+							@Html.Action("UserLogin", "Login")
+						</li>
+					</ul>
+				}
             </div>
         </div>
     </div>
@@ -36,7 +42,7 @@
         @RenderBody()
         <hr />
         <footer>
-            <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
+            <p>&copy; @DateTime.Now.Year - Ivan LnJ Markov</p>
         </footer>
     </div>
 

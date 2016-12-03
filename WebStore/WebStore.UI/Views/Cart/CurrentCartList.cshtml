@@ -1,16 +1,6 @@
 ﻿@model WebStore.Domain.Entities.Product[]
 @{
-	ViewBag.Title = "Ваша Корзина";
-	Layout = "~/Views/Shared/_CartLayout.cshtml";
-	List<double> combinedPrice4Product = new List<double>();
-	double total = 0;
-	double between = 0;
-	for (int i = 0; i < Model.Length; i++)
-	{
-		between = Model[i].Price * ViewBag.Quantities[i];
-		combinedPrice4Product.Add(between);
-		total += between;
-	}
+	ViewBag.Title = "Ваша корзина";
 }
 
 <h2>Ваша Корзина</h2>
@@ -46,7 +36,7 @@
 						@Model[i].Category.Name
 					</td>
 					<td>
-						@combinedPrice4Product[i] / @Model[i].Price
+						@ViewBag.cP4P[i] / @Model[i].Price
 					</td>
 					<td>
 						@ViewBag.Quantities[i]
@@ -65,7 +55,7 @@
 
 				</td>
 				<td>
-					@total
+					@ViewBag.total
 				</td>
 			</tr>
 		</tbody>
