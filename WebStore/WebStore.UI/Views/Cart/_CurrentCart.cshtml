@@ -1,0 +1,12 @@
+﻿@model WebStore.UI.Models.Cart.CartViewModel
+
+@{
+	int total = Model.IsNull() ? 0 : Model.Items.Sum(x => x.Quantity);
+	var cart = "Товаров в корзине: " + total;
+}
+
+<a href="@Url.Action("CurrentCartList", "Cart")" class="btn btn-info">
+	<span class="glyphicon glyphicon-shopping-cart" aria-hidden="true" style="color: white">
+		@cart
+	</span>
+</a>

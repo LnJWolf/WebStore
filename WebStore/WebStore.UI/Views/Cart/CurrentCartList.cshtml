@@ -1,0 +1,77 @@
+﻿@model WebStore.Domain.Entities.Product[]
+@{
+	ViewBag.Title = "Ваша Корзина";
+	Layout = "~/Views/Shared/_CartLayout.cshtml";
+	List<double> combinedPrice4Product = new List<double>();
+	double total = 0;
+	double between = 0;
+	for (int i = 0; i < Model.Length; i++)
+	{
+		between = Model[i].Price * ViewBag.Quantities[i];
+		combinedPrice4Product.Add(between);
+		total += between;
+	}
+}
+
+<h2>Ваша Корзина</h2>
+<div class="table-responsive">
+	<table class="table table-hover table-bordered">
+		<thead>
+			<tr>
+				<th>
+					Имя
+				</th>
+				<th>
+					Категория
+				</th>
+				<th>
+					Цена/за штуку
+				</th>
+				<th>
+					Количество
+				</th>
+				<th>
+					Действия
+				</th>
+			</tr>
+		</thead>
+		<tbody>
+			@for(int i = 0; i < Model.Length; i++)
+            {
+				<tr>
+					<td>
+						@Model[i].Name
+					</td>
+					<td>
+						@Model[i].Category.Name
+					</td>
+					<td>
+						@combinedPrice4Product[i] / @Model[i].Price
+					</td>
+					<td>
+						@ViewBag.Quantities[i]
+					</td>
+					<td>
+						<a href="@Url.Action("RemoveFromCart", "Cart", new { id = Model[i].Id })" class="btn btn-danger">Удалить</a>
+						<a href="@Url.Action("AddToCart", "Cart", new { id = Model[i].Id , IsIndex = false })" class="btn btn-success">Добавить ещё одну копию</a>
+					</td>
+				</tr>
+            }
+			<tr>
+				<td>
+					Итого:
+				</td>
+				<td>
+
+				</td>
+				<td>
+					@total
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+
+<a href="@Url.Action("Index", "Main")" class="btn btn-info">
+	Назад в магазин
+</a>

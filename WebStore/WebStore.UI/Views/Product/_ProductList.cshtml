@@ -1,0 +1,41 @@
+﻿@model IEnumerable<WebStore.Domain.Entities.Product>
+
+<div class="table-responsive">
+    <table class="table table-hover table-bordered">
+        <thead>
+            <tr>
+                <th>
+                    Имя
+                </th>
+                <th>
+                    Категория
+                </th>
+                <th>
+                    Действия
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var prod in Model)
+            {
+                <tr>
+                    <td>
+                        @prod.Name
+                    </td>
+                    <td>
+                        @prod.Category.Name
+                    </td>
+                    <td>
+                        <a href="@Url.Action("Edit", "Main", new { id = prod.Id })" class="btn btn-warning">Редактировать</a>
+                        <a href="@Url.Action("Remove", "Main", new { id = prod.Id })" class="btn btn-danger">Удалить</a>
+                        <a href="@Url.Action("AddToCart", "Cart", new { id = prod.Id, IsIndex = true })" class="btn btn-danger">Добавить в корзину</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+
+<a href="@Url.Action("Create", "Main")" class="btn btn-success">
+    Создать
+</a>

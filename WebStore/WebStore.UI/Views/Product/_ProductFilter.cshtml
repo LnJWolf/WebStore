@@ -1,0 +1,16 @@
+﻿@model ProductFilter
+@using (Ajax.BeginForm("Products", "Product", new AjaxOptions
+{
+    AllowCache = false,
+    HttpMethod = "GET",
+    InsertionMode = InsertionMode.Replace,
+    UpdateTargetId = "product-list"
+}))
+{
+    <div class="form-group">
+        @Html.LabelFor(x => x.Name)
+        @Html.TextBoxFor(x => x.Name, new { @class = "form-control" })
+    </div>
+
+    <button type="submit" class="btn btn-default">Фильтр</button>
+}

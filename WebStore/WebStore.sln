@@ -1,0 +1,64 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebStore.UI", "WebStore.UI\WebStore.UI.csproj", "{88AD0898-764D-4A49-9E6B-1AD219AC398A}"
+	ProjectSection(ProjectDependencies) = postProject
+		{313CA669-6C46-4C20-B495-06E0D019E727} = {313CA669-6C46-4C20-B495-06E0D019E727}
+		{A7CC8173-B2AF-481A-BAA6-686DD0E87E15} = {A7CC8173-B2AF-481A-BAA6-686DD0E87E15}
+		{BFA7F0B1-3AD6-4580-AA0C-EE78B358ECB5} = {BFA7F0B1-3AD6-4580-AA0C-EE78B358ECB5}
+		{E5603CC6-EE9E-4DEC-989F-D96B5CDCEE3F} = {E5603CC6-EE9E-4DEC-989F-D96B5CDCEE3F}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebStore.Domain", "WebStore.Domain\WebStore.Domain.csproj", "{E5603CC6-EE9E-4DEC-989F-D96B5CDCEE3F}"
+	ProjectSection(ProjectDependencies) = postProject
+		{313CA669-6C46-4C20-B495-06E0D019E727} = {313CA669-6C46-4C20-B495-06E0D019E727}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebStore.DataAccess", "WebStore.DataAccess\WebStore.DataAccess.csproj", "{BFA7F0B1-3AD6-4580-AA0C-EE78B358ECB5}"
+	ProjectSection(ProjectDependencies) = postProject
+		{313CA669-6C46-4C20-B495-06E0D019E727} = {313CA669-6C46-4C20-B495-06E0D019E727}
+		{E5603CC6-EE9E-4DEC-989F-D96B5CDCEE3F} = {E5603CC6-EE9E-4DEC-989F-D96B5CDCEE3F}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebStore.BusinessLogic", "WebStore.BusinessLogic\WebStore.BusinessLogic.csproj", "{A7CC8173-B2AF-481A-BAA6-686DD0E87E15}"
+	ProjectSection(ProjectDependencies) = postProject
+		{313CA669-6C46-4C20-B495-06E0D019E727} = {313CA669-6C46-4C20-B495-06E0D019E727}
+		{BFA7F0B1-3AD6-4580-AA0C-EE78B358ECB5} = {BFA7F0B1-3AD6-4580-AA0C-EE78B358ECB5}
+		{E5603CC6-EE9E-4DEC-989F-D96B5CDCEE3F} = {E5603CC6-EE9E-4DEC-989F-D96B5CDCEE3F}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebStore.Utility", "WebStore.Utility\WebStore.Utility.csproj", "{313CA669-6C46-4C20-B495-06E0D019E727}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{88AD0898-764D-4A49-9E6B-1AD219AC398A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{88AD0898-764D-4A49-9E6B-1AD219AC398A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{88AD0898-764D-4A49-9E6B-1AD219AC398A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{88AD0898-764D-4A49-9E6B-1AD219AC398A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E5603CC6-EE9E-4DEC-989F-D96B5CDCEE3F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E5603CC6-EE9E-4DEC-989F-D96B5CDCEE3F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E5603CC6-EE9E-4DEC-989F-D96B5CDCEE3F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E5603CC6-EE9E-4DEC-989F-D96B5CDCEE3F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BFA7F0B1-3AD6-4580-AA0C-EE78B358ECB5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BFA7F0B1-3AD6-4580-AA0C-EE78B358ECB5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BFA7F0B1-3AD6-4580-AA0C-EE78B358ECB5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BFA7F0B1-3AD6-4580-AA0C-EE78B358ECB5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A7CC8173-B2AF-481A-BAA6-686DD0E87E15}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A7CC8173-B2AF-481A-BAA6-686DD0E87E15}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A7CC8173-B2AF-481A-BAA6-686DD0E87E15}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A7CC8173-B2AF-481A-BAA6-686DD0E87E15}.Release|Any CPU.Build.0 = Release|Any CPU
+		{313CA669-6C46-4C20-B495-06E0D019E727}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{313CA669-6C46-4C20-B495-06E0D019E727}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{313CA669-6C46-4C20-B495-06E0D019E727}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{313CA669-6C46-4C20-B495-06E0D019E727}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

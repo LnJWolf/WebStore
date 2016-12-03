@@ -1,0 +1,19 @@
+﻿@model WebStore.UI.Models.Login.UserViewModel
+
+@if (Model == null || Model.IsAuthenticaticated)
+{
+    <div>
+        <span style="color: white">
+            @Model.Login
+        </span>
+        <span>
+            @Html.ActionLink("Logout", "Login")
+        </span>
+    </div>
+}
+else
+{
+    <div>
+        @Html.ActionLink("Login", "Login")
+    </div>
+}
