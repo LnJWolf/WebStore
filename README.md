@@ -4,4 +4,4 @@ Contains Login Page, Page with Product List with features of adding, editing and
 Database of Users, Products and their Categories was wade using Entity Framework, Automapper and Autofac.
 Cart of Products is stored using cookies.
 
-This example is still in progress, there should be role-separated functions and views, better cart and presentation of product list by categories. Probably would be done by 10 of december.
+This example is still in progress, there should be role-separated functions and views, better cart and presentation of product list by categories. Probably would be done till the end of december.
